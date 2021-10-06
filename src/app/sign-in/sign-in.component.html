@@ -1,1 +1,21 @@
-<p>sign-in works!</p>
+<div class="signin-wrapper" style="background-color: black;">
+  <h1>blank</h1>
+  <h1>blank</h1>
+  <h1>blank</h1>
+  <h1>blank</h1>
+  <h1>blank</h1>
+  <div class="siginp-body">
+    <form action="" class="form-signup" (ngSubmit)="onSubmit(signInForm)" #signInForm="ngForm">
+
+      <label for="inputEmail" class="label-signup">Email address</label>
+      <input type="email" id="inputEmail" name="email" class="form-input" placeholder="Email address" required autofocus ngModel>
+
+      <label for="inputPassword" class="label-signup">Password</label>
+      <input type="password" id="inputPassword" name="password" class="form-input" placeholder="Password" required ngModel>
+
+      <button class="btn-submit" type="submit">Get Started</button>
+      <a href="" class="a-redirect">CREATE ACCOUNT</a>
+      <a href="" class="a-redirect">NEED HELP?</a>
+    </form>
+  </div>
+</div>
