@@ -14,6 +14,14 @@
       <input type="password" id="inputPassword" name="password" class="form-input" placeholder="Password" required ngModel>
 
       <button class="btn-submit" type="submit">Get Started</button>
+
+      <div class="alert-signup" role="alert" *ngIf="isFormInvalid">
+        Please fill all fields
+      </div>
+      <div class="alert-signup" role="alert" *ngIf="areCredentialsInvalid">
+        Invalid user or password
+      </div>
+
       <a href="" class="a-redirect">CREATE ACCOUNT</a>
       <a href="" class="a-redirect">NEED HELP?</a>
     </form>

@@ -7,13 +7,15 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { IndexComponent } from './index/index.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignInComponent,
     SignUpComponent,
-    IndexComponent
+    IndexComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
