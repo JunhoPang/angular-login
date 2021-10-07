@@ -1,17 +1,18 @@
-<div class="signin-wrapper" style="background-color: black;">
-  <h1>blank</h1>
-  <h1>blank</h1>
-  <h1>blank</h1>
-  <h1>blank</h1>
-  <h1>blank</h1>
-  <div class="siginp-body">
-    <form action="" class="form-signup" (ngSubmit)="onSubmit(signInForm)" #signInForm="ngForm">
+<div class="signin-wrapper">
+  <div class="signin-body">
+    <form action="" class="form-signin" (ngSubmit)="onSubmit(signInForm)" #signInForm="ngForm">
 
-      <label for="inputEmail" class="label-signup">Email address</label>
-      <input type="email" id="inputEmail" name="email" class="form-input" placeholder="Email address" required autofocus ngModel>
+      <div class="input-signin">
+        <!-- <label for="inputEmail" class="label-signup">Email address</label> -->
+        <div class="input-text">
+          <input type="email" id="inputEmail" name="email" class="form-input" placeholder="Email address" autocomplete="off" required ngModel>
+        </div>
 
-      <label for="inputPassword" class="label-signup">Password</label>
-      <input type="password" id="inputPassword" name="password" class="form-input" placeholder="Password" required ngModel>
+        <!-- <label for="inputPassword" class="label-signup">Password</label> -->
+        <div class="input-text">
+          <input type="password" id="inputPassword" name="password" class="form-input" placeholder="Password" required ngModel>
+        </div>
+      </div>
 
       <button class="btn-submit" type="submit">Get Started</button>
 
