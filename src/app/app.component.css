@@ -8,9 +8,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.spacer {
+/* .spacer {
   flex: 1;
-}
+} */
 
 .vertical {
   margin: 0 10px;
@@ -34,35 +34,52 @@
 }
 
 .toolbar {
+  display: flex;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 60px;
-  display: flex;
+
+  min-width: 450px;
+
   align-items: center;
   /* background-color: #1976d2; */
+  justify-content: space-between;
+
   opacity: 1;
   color: white;
   font-weight: 600;
 }
 
-.toolbar img {
+.toolbar .toolbar-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toolbar .toolbar-home img {
   margin: 0 16px;
 }
 
-.toolbar #twitter-logo {
+.toolbar .toolbar-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toolbar .toolbar-menu #twitter-logo {
   height: 40px;
   margin: 0 8px;
 }
 
-.toolbar #youtube-logo {
+.toolbar .toolbar-menu #youtube-logo {
   height: 40px;
   margin: 0 16px;
 }
 
-.toolbar #twitter-logo:hover,
-.toolbar #youtube-logo:hover {
+.toolbar .toolbar-menu #twitter-logo:hover,
+.toolbar .toolbar-menu #youtube-logo:hover {
   opacity: 0.8;
 }
 /* 
