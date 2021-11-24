@@ -5,25 +5,68 @@
       <div class="input-signin">
         <!-- <label for="inputEmail" class="label-signup">Email address</label> -->
         <div class="input-text">
-          <input type="email" id="inputEmail" name="email" class="form-input" placeholder="Email address" autocomplete="off" required ngModel>
+          <input
+            type="email"
+            id="inputEmail"
+            name="email"
+            class="form-input"
+            placeholder="Email address"
+            [pattern]="regexEmail"
+            autocomplete="off"
+            required
+            [(ngModel)]="email"
+            #Email="ngModel">
         </div>
 
         <!-- <label for="inputPassword" class="label-signup">Password</label> -->
+
         <div class="input-text">
-          <input type="password" id="inputPassword" name="password" class="form-input" placeholder="Password" required ngModel>
+          <input
+            type="password"
+            id="inputPassword"
+            name="password"
+            class="form-input"
+            placeholder="Password"
+            [pattern]="regexPassword"
+            required
+            [(ngModel)]="password"
+            #Password="ngModel">
         </div>
       </div>
+      <button
+        class="btn-submit"
+        type="submit"
+        [disabled]="Email.errors?.required || Email.errors?.pattern || Password.errors?.required || Password.errors?.pattern">
+        Get Started
+      </button>
 
-      <button class="btn-submit" type="submit">Get Started</button>
-
-      <div class="alert-signup" role="alert" *ngIf="isFormInvalid">
+      <!-- <div class="alert-signup" role="alert" *ngIf="isFormInvalid">
         Please fill all fields
       </div>
       <div class="alert-signup" role="alert" *ngIf="areCredentialsInvalid">
         Invalid user or password
+      </div> -->
+
+      <div *ngIf="Email.errors">
+        <div class="alert-signup" role="alert" *ngIf="Email.errors.required">
+          Email required.
+        </div>
+        <div class="alert-signup" role="alert" *ngIf="Email.errors.pattern">
+          Email pattern not valid.
+        </div>
+      </div>
+  
+      <div *ngIf="Password.errors">
+        <div class="alert-signup" role="alert" *ngIf="Password.errors.required">
+          Password required.
+        </div>
+        <div class="alert-signup" role="alert" *ngIf="Password.errors.pattern">
+          Password pattern not valid.
+        </div>
       </div>
 
       <div class="link-div">
+        <!-- TODO : link -->
         <a href="" class="a-redirect">CREATE ACCOUNT</a>
         <a href="" class="a-redirect">NEED HELP?</a>
       </div>

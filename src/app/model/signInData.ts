@@ -1,3 +1,8 @@
+export type SignInDTO = {
+  account_email: string;
+  password: string;
+}
+
 export class SignInData {
   private email: string;
   private password: string;
@@ -13,5 +18,9 @@ export class SignInData {
   
   getPassword(): string {
     return this.password;
+  }
+
+  getUserInfo(): SignInDTO {
+    return { account_email: this.email, password: this.password };
   }
 }

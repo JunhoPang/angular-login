@@ -98,11 +98,15 @@ li {
   justify-content: center;
 }
 
-.btn-submit:hover {
+.btn-submit:hover:enabled {
   transition: all 0.3s ease-in-out;
   background-color: rgba(255, 88, 77, 0.8);
 
   cursor: pointer;
+}
+
+.btn-submit:disabled {
+  opacity: 0.6;
 }
 
 .alert-signup {
